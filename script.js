@@ -24,3 +24,12 @@ function calculateBMI(){
     document.querySelector("#state").textContent = "저체중";
   }
 }
+
+// BMI 수치에 따라 상단 삼각형 포인터 위치 이동 (0 ~ 40 범위 기준)
+  const pointer = document.querySelector("#gauge-pointer");
+  if (pointer) {
+    let percent = (bmi / 40) * 100;
+    if (percent < 0) percent = 0;
+    if (percent > 100) percent = 100;
+    pointer.style.left = percent + "%";
+  }
