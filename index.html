@@ -1,30 +1,35 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 계산기</title>
+</head>
+<body>
 
-    <h1>BMI 계산기</h1>
-   <div> <label for="height">키(cm)</label>
-    <input type="text" id="height" placeholder="예:170"></div>
-    <div><label for="weight">몸무게(kg)</label>
-    <input type="text" id="weight" placeholder="예:70"></div>
+  <h1>BMI 계산기</h1>
 
-    <button onclick="calculateBMI()">계산하기</button>
+  <div>
+    <label for="height">키(cm)</label>
+    <input type="text" id="height" placeholder="예:170">
+  </div>
 
-    <h2 id="result"></h2>
-    <h3 id="state"></h3>
+  <div>
+    <label for="weight">몸무게(kg)</label>
+    <input type="text" id="weight" placeholder="예:70">
+  </div>
 
-    <h2 id="result"></h2>
+  <button onclick="calculateBMI()">계산하기</button>
+
+  <h2 id="result"></h2>
   <h3 id="state"></h3>
 
-  <!-- 새로 바뀐 BMI 게이지 바 영역 -->
+  <!-- BMI 게이지 바 영역 -->
   <div class="bmi-gauge-container">
     <div id="gauge-pointer" class="gauge-pointer">▼</div>
+
     <div class="bmi-gauge-bar">
       <div class="gauge-section underweight">저체중</div>
       <div class="gauge-section normal">정상</div>
@@ -33,6 +38,7 @@
       <div class="gauge-section obese2">2단계 비만</div>
       <div class="gauge-section obese3">3단계 비만</div>
     </div>
+
     <div class="gauge-ticks">
       <span>0</span>
       <span>18.5이상</span>
@@ -43,6 +49,6 @@
     </div>
   </div>
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
 </html>
